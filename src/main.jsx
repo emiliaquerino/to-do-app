@@ -1,16 +1,10 @@
-import ReactDOM from "react-dom/client";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './style.css';
+import { ToDoProvider } from './contexts/TodoContext';
 
-import App from "./App.jsx";
-
-export const theme = extendTheme({
-  fonts: {
-    body: "'Josefin Sans', sans-serif",
-  },
-});
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <ChakraProvider theme={theme}>
-    <App />
-  </ChakraProvider>
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <ToDoProvider>
+      <App />
+    </ToDoProvider>
 );
