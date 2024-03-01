@@ -25,7 +25,7 @@ const TaskList = ({ todoList, filter }) => {
   return (
     <>
       {todoList.length > 0 ? (
-        <div class="todo-list">
+        <div className="todo-list">
           {todoList.map((todo, index) => {
             return (
               <TaskItem
@@ -38,7 +38,7 @@ const TaskList = ({ todoList, filter }) => {
           })}
         </div>
       ) : (
-        <div class="notice">
+        <div className="notice">
           <h2>{notice}</h2>
         </div>
       )}

@@ -1,23 +1,23 @@
-import { useState, useContext } from 'react';
-import { nanoid } from 'nanoid';
-import { TodoContext } from '../contexts/TodoContext';
+import { useState, useContext } from "react";
+import { nanoid } from "nanoid";
+import { TodoContext } from "../contexts/TodoContext";
 
 const TaskInput = () => {
   const { addTodoItem } = useContext(TodoContext);
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = nanoid();
     task.trim();
-    if (task === '') return;
+    if (task === "") return;
 
     addTodoItem({ id: id, task: task, isDone: false });
-    setTask('');
+    setTask("");
   };
 
   const clearInput = () => {
-    setTask('');
+    setTask("");
   };
 
   const handleChange = (e) => {
@@ -26,12 +26,9 @@ const TaskInput = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div class="input">
-        <div class="circle">
-          <div class="clear-input" onClick={clearInput}></div>
-        </div>
-
-        <input class="todo-input"
+      <div className="input">
+        <input
+          className="todo-input"
           type="text"
           placeholder="Create a new todo..."
           onChange={handleChange}

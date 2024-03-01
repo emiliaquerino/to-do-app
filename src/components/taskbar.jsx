@@ -15,13 +15,13 @@ const TaskBar = ({ onFilterChange }) => {
   const activeTodoNumber = todoItems.filter((todo) => !todo.isDone).length;
 
   return (
-    <div class="todo-info">
-      <div class="items-left">
+    <div className="todo-info">
+      <div className="items-left">
         <p>{activeTodoNumber} items left</p>
       </div>
-      <div class="filters">
+      <div className="filters">
         {filterCategories.map((filteredCategory) => (
-          <button class="btn-filter"
+          <button className="btn-filter"
             key={filteredCategory.id}
             active={active === filteredCategory.id}
             onClick={() => {
@@ -33,8 +33,8 @@ const TaskBar = ({ onFilterChange }) => {
           </button>
         ))}
       </div>
-      <div class="clear-filter">
-        <button class="btn-filter" onClick={clearFinishedTodos}>
+      <div className="clear-filter">
+        <button className="btn-filter" onClick={clearFinishedTodos}>
           Clear completed
         </button>
       </div>

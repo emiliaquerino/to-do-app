@@ -2,7 +2,7 @@ import Bg from '../assets/bg-desktop-dark.jpg';
 
 const Background = () => {
   return (
-    <div class="background">
+    <div className="background">
       <img src={Bg}/>
     </div>
   );

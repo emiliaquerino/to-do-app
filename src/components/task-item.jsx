@@ -8,16 +8,16 @@ const TaskItem = ({ todo }) => {
   const { id, task, isDone } = todo;
 
   return (
-    <div class="todo-container" key={id}>
-      <div class="checkbox">
+    <div className="todo-container" key={id}>
+      <div className="checkbox">
       <div className={`circle ${isDone ? 'done' : ''}`} onClick={() => toggleIsDone(id)}></div>
         <div className={`check ${isDone ? 'done' : ''}`} onClick={() => toggleIsDone(id)}>
           <img src={check} />
         </div>
       </div>
       <p className={`todo-text ${isDone ? 'done' : ''}`}>{task}</p>
-      <div class="todo-delete">
-        <img class="check-image" src={cross} onClick={() => deleteTodo(id)} />
+      <div className="todo-delete">
+        <img className="check-image" src={cross} onClick={() => deleteTodo(id)} />
       </div>
     </div>
   );
