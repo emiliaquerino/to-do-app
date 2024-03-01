@@ -313,7 +313,7 @@ h2 {
 
 .todo-text {
   width: 100%;
-  color: #DCDCDC;
+  color: #fff;
   font-size: 2rem;
   padding-left: 2rem;
   @media (max-width: 650px) {
